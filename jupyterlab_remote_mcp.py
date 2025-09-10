@@ -7,8 +7,8 @@ Connects to remote JupyterLab at https://cf-jupyter-uv.apps.tas-ndc.kuhn-labs.co
 import asyncio
 import logging
 import time
-from typing import Optional, List, Union, Dict, Any
-from urllib.parse import urljoin
+from typing import Union
+import os
 
 import httpx
 from mcp.server import FastMCP
@@ -41,9 +41,9 @@ logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
 
 # Configuration - your remote JupyterLab
-JUPYTER_URL = "https://cf-jupyter-uv.apps.tas-ndc.kuhn-labs.com"
-NOTEBOOK_PATH = "nbsample.ipynb"
-PROVIDER = "jupyter"
+JUPYTER_URL = os.environ.get("JUPYTER_URL", "https://cf-jupyter-uv.apps.tas-ndc.kuhn-labs.com")
+NOTEBOOK_PATH = os.environ.get("NOTEBOOK_PATH", "nbsample.ipynb")
+PROVIDER = os.environ.get("PROVIDER", "jupyter")
 
 # Global variables for kernel management
 kernel = None
