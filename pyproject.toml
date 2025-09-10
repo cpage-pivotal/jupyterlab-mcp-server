@@ -1,0 +1,30 @@
+[project]
+name = "cf-jupyterlab-uv"
+version = "0.1.0"
+description = "JupyterLab on Tanzu Platform for Cloud Foundry with uv"
+requires-python = ">=3.11"
+dependencies = [
+    "jupyter>=1.0.0",
+    "jupyter-core>=5.0.0",
+    "jupyter-client>=8.0.0",
+    "jupyter-server>=2.0.0",
+    "jupyterlab==4.4.1",
+    "jupyterlab-git==0.51.2",
+    "notebook",
+    "ipykernel",
+    "python-dotenv",
+    "ipywidgets",
+    "requests",
+    "openai",
+    "langchain",
+    "langchain-openai",
+    "langchain-experimental",
+    "langchain-chroma",
+    "datasets",
+    "unstructured",
+    "modal",
+    "ollama",
+]
+
+[tool.uv]
+dev-dependencies = []

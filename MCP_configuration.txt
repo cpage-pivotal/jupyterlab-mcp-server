@@ -1,0 +1,6 @@
+    "jupyterlab-remote": {
+      "command": "/Users/yourusername/Desktop/jupyterlab-remote-mcp/.venv/bin/python",
+      "args": [
+        "/Users/yourusername/Desktop/jupyterlab-remote-mcp/jupyterlab_remote_mcp.py"
+      ]
+    }
